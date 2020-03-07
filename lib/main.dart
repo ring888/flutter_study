@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
 import './demo/bottomNavigationBar_demo.dart';
-
+import './demo/pageview_demo.dart';
 void main() => runApp(App());
 
 class App extends StatelessWidget {
@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
       appBar: AppBar(
         title:Text("home page"),
@@ -42,6 +42,7 @@ class Home extends StatelessWidget {
           Icon(Icons.local_florist),
           Icon(Icons.change_history),
           Icon(Icons.directions_bike),
+          Icon(Icons.photo_album)
         ],
         unselectedLabelColor: Colors.black38,//未被激活的tab标签颜色设置
         indicatorColor: Colors.black54,//tab下划线的颜色
@@ -54,6 +55,7 @@ class Home extends StatelessWidget {
           Movie(),
           Icon(Icons.change_history,size: 100.0,color: Colors.black12,),
           Icon(Icons.directions_bike,size: 100.0,color: Colors.black12,),
+          GridViewDemo()
       ]),
       drawer: DrawerWidget(),
       bottomNavigationBar: NavigationBar()
